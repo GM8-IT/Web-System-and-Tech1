@@ -1,0 +1,143 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    padding: 20px 15px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 20px;      
+    padding: 30px;             
+    min-height: 250px;         
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+    background-color: #6f42c1; 
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-primary:hover {
+    background-color: #5936a6; 
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #ffc107; 
+    color: #000;
+    border: none;
+    border-radius: 8px;
+}
+.btn-secondary:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
+
+.form-control, .form-select {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #6f42c1;
+    box-shadow: 0 0 0 0.2rem rgba(111,66,193,.25);
+}
+
+table {
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    border-collapse: collapse;
+}
+table thead {
+    background-color: #6f42c1; 
+    color: #fff;
+}
+table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+table tbody tr:hover {
+    background-color: #e7e0f8; 
+}
+.table .btn {
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+.table .btn:hover {
+    transform: scale(1.05);
+}
+
+img.profile {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #6f42c1; 
+    transition: transform 0.3s ease;
+}
+img.profile:hover {
+    transform: scale(1.1);
+}
+img.signature {
+    width: 120px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid #ffc107; 
+}
+
+h3, h4 {
+    color: #6f42c1; 
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border-radius: 10px;
+}
+.alert-danger {
+    background-color: #f8d7da;
+    color: #842029;
+    border-radius: 10px;
+}
+
+.navbar {
+    background-color: #6f42c1; 
+}
+.navbar a {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.navbar a:hover {
+    color: #ffc107; 
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px; 
+}
