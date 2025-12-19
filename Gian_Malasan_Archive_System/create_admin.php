@@ -1,5 +1,4 @@
 <?php
-// Run this once to create an admin user. Then delete this file.
 include 'db.php';
 
 if (isset($_POST['create'])) {
@@ -25,4 +24,5 @@ if (isset($_POST['create'])) {
   <input name="email" placeholder="admin@example.com"><br>
   <button name="create">Create Admin</button>
 </form>
+
 </body></html>
