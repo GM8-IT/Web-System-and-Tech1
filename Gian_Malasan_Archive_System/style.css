@@ -1,0 +1,397 @@
+/* Modern theme for Thesis Archive System
+   Primary color: Purple
+   Secondary color: Gold
+   Place this file at: assets/css/style.css
+   Add to header.php after Bootstrap: <link rel="stylesheet" href="assets/css/style.css">
+*/
+
+/* Color palette */
+:root{
+  --primary: #6C5CE7;       /* purple */
+  --primary-600: #5b4bd6;
+  --primary-700: #4a39b0;
+  --secondary: #D4AF37;     /* gold */
+  --secondary-600: #b58f2d;
+  --bg: #F6F7FB;
+  --muted: #6c757d;
+  --card: #ffffff;
+  --glass: rgba(255,255,255,0.6);
+  --radius: 12px;/* Modern theme for Thesis Archive System
+   Primary color: Purple
+   Secondary color: Gold
+   Place this file at: assets/css/style.css
+   Add to header.php after Bootstrap: <link rel="stylesheet" href="assets/css/style.css">
+*/
+
+/* Color palette */
+:root{
+  --primary: #6C5CE7;       /* purple */
+  --primary-600: #5b4bd6;
+  --primary-700: #4a39b0;
+  --secondary: #D4AF37;     /* gold */
+  --secondary-600: #b58f2d;
+  --bg: #F6F7FB;
+  --muted: #6c757d;
+  --card: #ffffff;
+  --glass: rgba(255,255,255,0.6);
+  --radius: 12px;
+  --shadow-sm: 0 6px 18px rgba(35,38,56,0.06);
+  --shadow-md: 0 10px 28px rgba(35,38,56,0.09);
+}
+
+/* Global resets and body */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, #ffffff 100%);
+  color: #222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  padding-bottom:40px;
+}
+
+/* Container tweaks */
+.container{ max-width:1100px; }
+
+/* Navbar */
+.navbar{
+  background: linear-gradient(90deg, rgba(108,92,231,0.96), rgba(92,79,188,0.95));
+  border-radius: calc(var(--radius) / 2);
+  box-shadow: var(--shadow-sm);
+  padding: .6rem 1rem;
+}
+.navbar .navbar-brand{
+  color: #fff;
+  font-weight:700;
+  letter-spacing:0.2px;
+}
+.navbar .nav-link{ color: rgba(255,255,255,0.95); }
+.navbar .nav-link:hover{ color: var(--secondary); }
+
+/* Brand accent */
+.brand-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+}
+.brand-dot{
+  width:10px; height:10px; border-radius:50%;
+  background: linear-gradient(180deg,var(--secondary),var(--secondary-600));
+  box-shadow: 0 2px 6px rgba(212,175,55,0.28);
+}
+
+/* Cards */
+.card{
+  border: none;
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--card), rgba(255,255,255,0.98));
+  box-shadow: var(--shadow-sm);
+}
+.card .card-title{ color: var(--primary-700); font-weight:700; }
+
+/* Buttons */
+.btn-primary{
+  background: linear-gradient(180deg,var(--primary),var(--primary-600));
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  padding: .56rem .9rem;
+  box-shadow: 0 6px 14px rgba(108,92,231,0.18);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn-primary:hover{ transform: translateY(-2px); box-shadow: var(--shadow-md); background: var(--primary-700); }
+
+.btn-secondary{
+  background: linear-gradient(180deg,var(--secondary),var(--secondary-600));
+  border: none;
+  color: #111;
+  border-radius: 10px;
+  padding: .5rem .85rem;
+  transition: transform .12s ease;
+}
+.btn-secondary:hover{ transform: translateY(-2px); box-shadow: 0 8px 18px rgba(201,163,0,0.12); }
+
+/* Form controls */
+.form-control, .form-select, textarea.form-control{
+  border-radius: 8px;
+  border: 1px solid rgba(20,20,35,0.06);
+  padding: .6rem .8rem;
+  background: linear-gradient(180deg,#fff,#fbfbfd);
+  transition: box-shadow .12s ease, border-color .12s ease;
+}
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 6px 18px rgba(108,92,231,0.12);
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* Table styling */
+.table{
+  background: transparent;
+}
+.table thead th{
+  border-bottom: 0;
+  color: var(--muted);
+  font-weight:600;
+  font-size: .9rem;
+}
+.table tbody tr{
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.96));
+  box-shadow: 0 4px 12px rgba(35,38,56,0.03);
+  border-radius: 8px;
+}
+.table tbody tr td{
+  vertical-align: middle;
+}
+
+/* List cards in library */
+.border.p-3{
+  border-radius: 12px;
+  background: linear-gradient(180deg,#fff,#fbfbfd);
+  box-shadow: 0 6px 18px rgba(35,38,56,0.04);
+}
+
+/* Badges & labels */
+.badge-primary{
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  padding: .35rem .5rem;
+}
+.badge-embargo{ background: var(--secondary); color:#111; }
+
+/* Avatar */
+.avatar{
+  width:48px; height:48px; border-radius:50%;
+  object-fit:cover; border: 2px solid #fff;
+  box-shadow: 0 6px 14px rgba(35,38,56,0.09);
+}
+
+/* Profile/Signature preview small */
+.signature-preview{ max-height:70px; border:1px dashed rgba(20,20,35,0.06); padding:6px; border-radius:6px; display:inline-block; }
+
+/* File input custom look */
+.file-input {
+  border: 1px dashed rgba(20,20,35,0.06);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  background: linear-gradient(180deg,#fff,#fcfcfd);
+}
+.file-input input[type=file]{ display:block; margin: 6px auto 0; }
+
+/* Small helpers */
+.muted { color: var(--muted); }
+.small { font-size: .85rem; }
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align:center;
+  color: #666;
+  font-size: .9rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar .navbar-brand{ font-size: 1rem; }
+  .card { border-radius: 10px; }
+  .container { padding-left: 12px; padding-right: 12px; }
+}
+
+/* Utility classes */
+.shadow-soft{ box-shadow: var(--shadow-sm); }
+.rounded-lg{ border-radius: calc(var(--radius) + 4px); }
+
+/* Alerts custom */
+.alert{
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(35,38,56,0.03);
+}
+
+/* Small transitions across clickable elements */
+a, button { transition: .12s ease; }
+
+/* End of stylesheet */
+  --shadow-sm: 0 6px 18px rgba(35,38,56,0.06);
+  --shadow-md: 0 10px 28px rgba(35,38,56,0.09);
+}
+
+/* Global resets and body */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, #ffffff 100%);
+  color: #222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  padding-bottom:40px;
+}
+
+/* Container tweaks */
+.container{ max-width:1100px; }
+
+/* Navbar */
+.navbar{
+  background: linear-gradient(90deg, rgba(108,92,231,0.96), rgba(92,79,188,0.95));
+  border-radius: calc(var(--radius) / 2);
+  box-shadow: var(--shadow-sm);
+  padding: .6rem 1rem;
+}
+.navbar .navbar-brand{
+  color: #fff;
+  font-weight:700;
+  letter-spacing:0.2px;
+}
+.navbar .nav-link{ color: rgba(255,255,255,0.95); }
+.navbar .nav-link:hover{ color: var(--secondary); }
+
+/* Brand accent */
+.brand-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+}
+.brand-dot{
+  width:10px; height:10px; border-radius:50%;
+  background: linear-gradient(180deg,var(--secondary),var(--secondary-600));
+  box-shadow: 0 2px 6px rgba(212,175,55,0.28);
+}
+
+/* Cards */
+.card{
+  border: none;
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--card), rgba(255,255,255,0.98));
+  box-shadow: var(--shadow-sm);
+}
+.card .card-title{ color: var(--primary-700); font-weight:700; }
+
+/* Buttons */
+.btn-primary{
+  background: linear-gradient(180deg,var(--primary),var(--primary-600));
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  padding: .56rem .9rem;
+  box-shadow: 0 6px 14px rgba(108,92,231,0.18);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn-primary:hover{ transform: translateY(-2px); box-shadow: var(--shadow-md); background: var(--primary-700); }
+
+.btn-secondary{
+  background: linear-gradient(180deg,var(--secondary),var(--secondary-600));
+  border: none;
+  color: #111;
+  border-radius: 10px;
+  padding: .5rem .85rem;
+  transition: transform .12s ease;
+}
+.btn-secondary:hover{ transform: translateY(-2px); box-shadow: 0 8px 18px rgba(201,163,0,0.12); }
+
+/* Form controls */
+.form-control, .form-select, textarea.form-control{
+  border-radius: 8px;
+  border: 1px solid rgba(20,20,35,0.06);
+  padding: .6rem .8rem;
+  background: linear-gradient(180deg,#fff,#fbfbfd);
+  transition: box-shadow .12s ease, border-color .12s ease;
+}
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 6px 18px rgba(108,92,231,0.12);
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* Table styling */
+.table{
+  background: transparent;
+}
+.table thead th{
+  border-bottom: 0;
+  color: var(--muted);
+  font-weight:600;
+  font-size: .9rem;
+}
+.table tbody tr{
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.96));
+  box-shadow: 0 4px 12px rgba(35,38,56,0.03);
+  border-radius: 8px;
+}
+.table tbody tr td{
+  vertical-align: middle;
+}
+
+/* List cards in library */
+.border.p-3{
+  border-radius: 12px;
+  background: linear-gradient(180deg,#fff,#fbfbfd);
+  box-shadow: 0 6px 18px rgba(35,38,56,0.04);
+}
+
+/* Badges & labels */
+.badge-primary{
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  padding: .35rem .5rem;
+}
+.badge-embargo{ background: var(--secondary); color:#111; }
+
+/* Avatar */
+.avatar{
+  width:48px; height:48px; border-radius:50%;
+  object-fit:cover; border: 2px solid #fff;
+  box-shadow: 0 6px 14px rgba(35,38,56,0.09);
+}
+
+/* Profile/Signature preview small */
+.signature-preview{ max-height:70px; border:1px dashed rgba(20,20,35,0.06); padding:6px; border-radius:6px; display:inline-block; }
+
+/* File input custom look */
+.file-input {
+  border: 1px dashed rgba(20,20,35,0.06);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  background: linear-gradient(180deg,#fff,#fcfcfd);
+}
+.file-input input[type=file]{ display:block; margin: 6px auto 0; }
+
+/* Small helpers */
+.muted { color: var(--muted); }
+.small { font-size: .85rem; }
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align:center;
+  color: #666;
+  font-size: .9rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar .navbar-brand{ font-size: 1rem; }
+  .card { border-radius: 10px; }
+  .container { padding-left: 12px; padding-right: 12px; }
+}
+
+/* Utility classes */
+.shadow-soft{ box-shadow: var(--shadow-sm); }
+.rounded-lg{ border-radius: calc(var(--radius) + 4px); }
+
+/* Alerts custom */
+.alert{
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(35,38,56,0.03);
+}
+
+/* Small transitions across clickable elements */
+a, button { transition: .12s ease; }
+
+/* End of stylesheet */
