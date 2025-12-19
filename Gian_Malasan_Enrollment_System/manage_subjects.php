@@ -22,7 +22,7 @@ if(isset($_GET['delete'])){
         echo "<script>alert('Cannot delete subject: students are enrolled.'); window.location='manage_subjects.php';</script>";
     } else {
         $conn->query("DELETE FROM subjects WHERE id=$id");
-        header("Location: manage_subjects.php"); // refresh page
+        header("Location: manage_subjects.php"); 
     }
 }
 
@@ -81,4 +81,5 @@ $result = $conn->query("SELECT s.*, p.title as prereq_title FROM subjects s LEFT
         </tbody>
     </table>
 </div>
+
 
